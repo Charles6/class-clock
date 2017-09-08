@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Teko';
+  src: url('Teko/Teko-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('Orbitron/Orbitron-Regular.ttf') format('truetype');
+}
+
+html,body{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  font-family: 'Orbitron';
+}
+
+ul{
+  list-style: none;
+}
+
+#layer0{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#background{
+  width: 100%;
+}
+
+#background img{
+  width: 100%;
+}
+
+#coverBottom{
+  position: relative;
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 67%,rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 67%,rgba(0,0,0,1) 100%);
+  height: 200px;
+  width: 100%;
+  margin-top: -200px;
+}
+
+#layer1{
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.box{
+  position: static;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+#container{
+  width: 300px;
+  height: 200px;
+  margin-top: 100px;
+}
+
+#agenda{
+  width: 300px;
+  padding-bottom: 10px;
+}
+
+#agenda h1{
+  text-align: center;
+  color:#00FFF7;
+}
+
+#container div{
+  text-align: center;
+}
+
+#day{
+  font-size: 60px;
+  color:#FF9700;
+}
+#date{
+  font-size: 25px;
+}
+#time{
+  font-size: 80px;
+  color: magenta;
+}
+
