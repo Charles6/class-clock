@@ -46,9 +46,24 @@ ul{
 }
 
 #layer1{
-  width: 100%;
+  width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   position: absolute;
   z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+#bentoLeft{
+
+}
+#bentoRight{
+  height: 600px;
+  width: 400px;
+  padding-top: 100px;
 }
 
 .box{
@@ -61,13 +76,16 @@ ul{
 }
 
 #container{
-  width: 300px;
+/*  width: 300px;*/
+  padding: 5px;
   height: 200px;
   margin-top: 100px;
 }
 
 #agenda{
-  width: 300px;
+/*  width: 300px;*/
+  margin-top: 10px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
@@ -92,3 +110,19 @@ ul{
   color: magenta;
 }
 
+#chatBox{
+  width: 100%;
+  padding: 10px;
+}
+
+#messageContainer{
+  padding-top: 10px;
+}
+
+#messageContainer p {
+  margin: 0px;
+}
+
+.nameTime{
+  font-size: 10px;
+}

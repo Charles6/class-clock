@@ -14,21 +14,77 @@
     </div>
 
     <div id="layer1">
-      <div class="box" id="container">
-        <div id="day"></div>
-        <div id="date"></div>
-        <div id="time"></div>
+      <div id="bentoLeft">
+        <div class="box" id="container">
+          <div id="day"></div>
+          <div id="date"></div>
+          <div id="time"></div>
+        </div>
+        <div class="box" id="agenda">
+          <h1>Agenda</h1>
+          <ul>
+            <li><input type="checkbox">Finish Clock</li>
+            <li><input type="checkbox">Watch Chapter 3</li>
+            <li><input type="checkbox">Look for new jobs</li>
+          </ul>
+        </div>
       </div>
-      <div class="box" id="agenda">
-        <h1>Agenda</h1>
-        <ul>
-          <li><input type="checkbox">Finish Clock</li>
-          <li><input type="checkbox">Watch Chapter 3</li>
-          <li><input type="checkbox">Look for new jobs</li>
-        </ul>
+      <div id="bentoRight">
+        <div class="box" id="chatBox">
+          <div id="loginContainer">
+            <table>
+              <tr>
+                <th>name:</th>
+                <td><input id="nameInput" type="text"></td>
+              </tr>
+              <tr>
+                <th>color:</th>
+                <td><input id="colorInput" type="text"></td>
+              </tr>
+            </table>
+            <button onclick="login()">Login</button>
+          </div>
+          
+          <div id="makeMessage"></div>
+          
+          <div id="messageContainer"></div>
+        </div>
       </div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA_XTPnsRqWHkm9n7DVNxf4-Oe3WjDLI24",
+        authDomain: "class-chat-f1252.firebaseapp.com",
+        databaseURL: "https://class-chat-f1252.firebaseio.com",
+        projectId: "class-chat-f1252",
+        storageBucket: "class-chat-f1252.appspot.com",
+        messagingSenderId: "396322619834"
+      };
+      firebase.initializeApp(config);
+    </script>
+
     <script src="script.js"></script>
+    <script src="profile.js"></script>
+    <script src="message.js"></script>
+    <script src="time-stamp.js"></script>
+
+    <script>
+      var loggedIn = false
+      
+      document.addEventListener('keydown', function(event) {
+        if (event.key == "Enter"){
+          if (loggedIn == false){
+            login();
+            setTimeout(function(){loggedIn = true;},500)
+          }
+          if (loggedIn == true){
+            post();
+          }
+        };
+      });
+    </script>
   </body>
 </html>
