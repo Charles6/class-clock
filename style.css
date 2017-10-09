@@ -20,12 +20,41 @@ ul{
   list-style: none;
 }
 
+input{
+  background-color: rgba(0,0,0,0);
+  border: rgba(0,0,0,0);
+  border-bottom: white solid 2px;
+  color: white;
+}
+
+/*input[type=text]:focus{
+  border: red solid 1px;
+}*/
+
+
+button {
+  background: rgb(20,20,20);
+  border: none;
+  color:grey;
+  box-shadow: 0 1px 3px rgba(0,230,230,0.12), 0 1px 2px rgba(0,230,230,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+button:hover {
+  box-shadow: 0 14px 28px rgba(0,230,230,0.25), 0 10px 10px rgba(0,230,230,0.22);
+}
+
+
 #layer0{
   position: absolute;
   z-index: 0;
   width: 100%;
   height: 100%;
   background-color: black;
+}
+
+#layer0 img{
+  opacity: 0.2;
 }
 
 #background{
@@ -46,7 +75,7 @@ ul{
 }
 
 #layer1{
-  width: 740px;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -55,6 +84,7 @@ ul{
   z-index: 1;
   display: flex;
   justify-content: space-around;
+  flex-wrap:wrap;
 }
 
 #bentoLeft{
@@ -62,7 +92,7 @@ ul{
 }
 #bentoRight{
   height: 600px;
-  width: 400px;
+  width: 600px;
   padding-top: 100px;
 }
 
@@ -71,8 +101,9 @@ ul{
   display: block;
   margin-right: auto;
   margin-left: auto;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.9);
   color: white;
+  border-radius: 10px;
 }
 
 #container{
@@ -92,6 +123,22 @@ ul{
 #agenda h1{
   text-align: center;
   color:#00FFF7;
+}
+
+.agendaLI{
+  animation:slid-in 0.5s ease-in;
+}
+
+
+
+input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+} 
+
+
+#agendaInput{
+  margin-left:30px;
+  margin-right: 5px;
 }
 
 #container div{
@@ -115,8 +162,16 @@ ul{
   padding: 10px;
 }
 
+.messageBox{
+  margin-top: 5px;
+  animation: slid-in 0.5s ease-in;
+
+}
+
 #messageContainer{
   padding-top: 10px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 #messageContainer p {
@@ -126,3 +181,11 @@ ul{
 .nameTime{
   font-size: 10px;
 }
+
+
+@keyframes slid-in{
+  0%   {margin-left:-50px; opacity: 0;}
+  80%   {margin-left:-50px; opacity: 0;}
+  90%  {margin-left:5px; opacity: 1;}
+  100%  {margin-left:0px;opacity: 1;}
+};
