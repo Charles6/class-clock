@@ -28,11 +28,6 @@ input{
   color: white;
 }
 
-/*input[type=text]:focus{
-  border: red solid 1px;
-}*/
-
-
 button {
   background: rgb(20,20,20);
   border: none;
@@ -88,9 +83,6 @@ button:hover {
   flex-wrap:wrap;
 }
 
-#bentoLeft{
-
-}
 #bentoRight{
   height: 600px;
   width: 600px;
@@ -108,23 +100,27 @@ button:hover {
 }
 
 #container{
-/*  width: 300px;*/
-  padding: 5px;
+  padding: 10px;
   height: 200px;
   margin-top: 100px;
 }
 
 #agenda{
-/*  width: 300px;*/
   margin-top: 10px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 #agenda h1{
+  margin-top: 0px;
   text-align: center;
   color:#00FFF7;
 }
+
+#agenda ul{
+  padding-left: 20px;
+}
+
 
 .agendaLI{
   animation:slid-in 0.5s ease-in;
