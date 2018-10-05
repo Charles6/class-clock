@@ -47,3 +47,8 @@ const post = () => {
   });
   document.getElementById('input').value = "";
 };
+
+const clearChatHistory = () => {
+  firebase.database().ref("messageVault").remove();
+  location.reload(); 
+};

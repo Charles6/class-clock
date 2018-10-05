@@ -19,3 +19,8 @@ const newAgenda = () => {
   });
   document.getElementById('agendaInput').value = "";
 };
+
+const clearAgenda = () => {
+  firebase.database().ref("agendaItems").remove();
+  location.reload(); 
+};
