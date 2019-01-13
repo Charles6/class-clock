@@ -11,11 +11,11 @@ dbRef.on('child_added', snap => {
   node.innerHTML = '<p class="nameTime"><span style="color:' + messObj.color + '">' +messObj.uid + '</span> ' + messObj.timestamp + "</p><p>" + messObj.message + "</p>";
   document.getElementById("messageContainer").appendChild(node);
   
-  if(messageStack.length > 10){
-    var elements = document.getElementsByClassName("messageBox");
-      elements[0].parentNode.removeChild(elements[0]);
-    messageStack.shift();
-  }
+  // if(messageStack.length > 10){
+  //   var elements = document.getElementsByClassName("messageBox");
+  //     elements[0].parentNode.removeChild(elements[0]);
+  //   messageStack.shift();
+  // }
 });
 
 var userPref = {

@@ -34,11 +34,11 @@
             <table>
               <tr>
                 <th>name:</th>
-                <td><input id="nameInput" type="text"></td>
+                <td><input id="nameInput" type="text" value="anonymous"></td>
               </tr>
               <tr>
                 <th>color:</th>
-                <td><input id="colorInput" type="text"></td>
+                <td><input id="colorInput" type="text" value="gray"></td>
               </tr>
             </table>
             <button onclick="login()">Login</button>
@@ -46,7 +46,10 @@
           
           <div id="makeMessage"></div>
           
-          <div id="messageContainer"></div>
+          <div id="chatContainer">
+            <div id="messageContainer"></div>
+          </div>
+          
         </div>
       </div>
     </div>

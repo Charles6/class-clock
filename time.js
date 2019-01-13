@@ -22,16 +22,9 @@ const updateTime = () => {
   document.getElementById("time").innerHTML = timePrint;
 };
 
-const startTime = () => {
-  updateTime();
-  setInterval(updateTime, 15000)
-}
-
-startTime();
-
 function timeStamp() {
   var now = new Date();
-  var date = [now.getDate(), now.getMonth() + 1, now.getFullYear() ];
+  var date = [ now.getDate(), now.getMonth() + 1, now.getFullYear() ];
   var time = [ now.getHours(), now.getMinutes() ];
 
   for ( var i = 1; i < 3; i++ ) {
@@ -42,3 +35,6 @@ function timeStamp() {
   
   return time.join(":") + "-" + date.join("/");
 }
+
+updateTime();
+setInterval(updateTime, 15000);
