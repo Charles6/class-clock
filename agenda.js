@@ -24,3 +24,15 @@ const clearAgenda = () => {
   firebase.database().ref("agendaItems").remove();
   location.reload(); 
 };
+
+var AgendaEdit = false
+document.getElementById("agendaCreate").style.display = 'none';
+const toggleAgendaEdit = () => {
+  if (AgendaEdit === false) {
+    document.getElementById("agendaCreate").style.display = 'inline';
+    AgendaEdit = true;
+  } else {
+    document.getElementById("agendaCreate").style.display = 'none';
+    AgendaEdit = false;
+  }
+}
